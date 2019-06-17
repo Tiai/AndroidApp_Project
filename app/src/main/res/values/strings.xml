@@ -9,4 +9,7 @@
     <string name="text_type">Please select your type</string>
     <string name="text_deadline">Please select your deadline</string>
     <string name="text_notify">Notify me!</string>
+    <string name="text_budget">BUDGET</string>
+    <string name="text_deposit">DEPOSIT</string>
+    <string name="editText_deposit">Please enter your deposit</string>
 </resources>

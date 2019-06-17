@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.Calendar;
 
 public class Budget extends AppCompatActivity {
@@ -48,5 +50,7 @@ public class Budget extends AppCompatActivity {
         budget = Integer.valueOf(edittext_budget.getText().toString());
 
         int dailycost = budget/remain_days;
+
+        Toast.makeText(Budget.this, "Your daily quota is " + String.valueOf(dailycost),Toast.LENGTH_LONG).show();
     }
 }
