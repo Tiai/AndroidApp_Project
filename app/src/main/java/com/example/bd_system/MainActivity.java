@@ -37,12 +37,16 @@ public class MainActivity extends AppCompatActivity {
                 "shared_deposit", MODE_PRIVATE);
         dailySave = sp_deposit.getInt(STATE_DEPOSIT, 0);
 
-        totalcount = dailyCost + dailySave;
+        totalcount = dailyCost - dailySave;
 
         if(totalcount != 0){
-            Toast.makeText(MainActivity.this, "You must have " + String.valueOf(totalcount) + " at the end of the day" ,Toast.LENGTH_LONG).show();
+            String text = "Your daily quota is " + String.valueOf(dailyCost) + "\n"
+                    + "Your must save " + String.valueOf(dailySave) + " per day" + "\n"
+                    + "So You have only " + String.valueOf(totalcount) + " available everyday";
+
+            Toast.makeText(MainActivity.this,text, Toast.LENGTH_LONG).show();
+
             TextView totalText = findViewById(R.id.text_hold);
-            String text = "You must have " + String.valueOf(totalcount) + " at the end of the day";
             totalText.setText(text);
         }
     }
@@ -62,9 +66,13 @@ public class MainActivity extends AppCompatActivity {
         totalcount = dailyCost + dailySave;
 
         if(totalcount != 0){
-            Toast.makeText(MainActivity.this, "You must have " + String.valueOf(totalcount) + " at the end of the day" ,Toast.LENGTH_LONG).show();
+            String text = "Your daily quota is " + String.valueOf(dailyCost) + "\n"
+                    + "Your must save " + String.valueOf(dailySave) + " per day" + "\n"
+                    + "So You have only " + String.valueOf(totalcount) + " available everyday";
+
+            Toast.makeText(MainActivity.this,"You have only " + String.valueOf(totalcount) + " available everyday", Toast.LENGTH_LONG).show();
+
             TextView totalText = findViewById(R.id.text_hold);
-            String text = "You must have " + String.valueOf(totalcount) + " at the end of the day";
             totalText.setText(text);
         }
     }
