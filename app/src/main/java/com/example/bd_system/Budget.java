@@ -6,9 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+import java.util.Calendar;
 
 public class Budget extends AppCompatActivity {
+
+    private int budget;
+    private int remain_days;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +22,6 @@ public class Budget extends AppCompatActivity {
     public void showDatePicker(View view) {
         DialogFragment newFragment = new DateSelect();
         newFragment.show(getSupportFragmentManager(),"datePicker");
-
-
     }
 
     public void processDatePickerResult(int year, int month, int day) {
@@ -31,9 +32,21 @@ public class Budget extends AppCompatActivity {
         TextView dateText = findViewById(R.id.text_deadline);
         String date = year_string + "/" + month_string + "/" + day_string;
         dateText.setText(date);
+
+        Calendar toDate = Calendar.getInstance();
+        toDate.set(year,month,day);
+
+        Calendar now = Calendar.getInstance();
+
+        long days = ( toDate.getTimeInMillis() - now.getTimeInMillis() ) / (60*60*24*1000);
+
+        remain_days = (int)days;
     }
 
-    public void addBudgetList(View view) {
+    public void setNotify(View view) {
+        EditText edittext_budget = findViewById(R.id.editText_budget);
+        budget = Integer.valueOf(edittext_budget.getText().toString());
 
+        int dailycost = budget/remain_days;
     }
 }

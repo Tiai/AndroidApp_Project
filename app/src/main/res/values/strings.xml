@@ -7,6 +7,6 @@
     <string name="button_updateBudget">Update Budget</string>
     <string name="editText_budget">Please enter your budget</string>
     <string name="text_type">Please select your type</string>
-    <string name="text_add">ADD</string>
     <string name="text_deadline">Please select your deadline</string>
+    <string name="text_notify">Notify me!</string>
 </resources>

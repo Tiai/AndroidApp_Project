@@ -56,14 +56,14 @@
         app:layout_constraintStart_toEndOf="@+id/button_date" />
 
     <Button
-        android:id="@+id/button_addDataBudget"
+        android:id="@+id/button_notify"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/text_add"
+        android:text="@string/text_notify"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_date"
-        android:onClick="addBudgetList"/>
+        android:onClick="setNotify"/>
 
 </android.support.constraint.ConstraintLayout>
