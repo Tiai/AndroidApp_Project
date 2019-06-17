@@ -1,5 +1,6 @@
 package com.example.bd_system;
 
+import android.content.SharedPreferences;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,11 +15,41 @@ public class Budget extends AppCompatActivity {
 
     private int budget;
     private int remain_days;
+    private int dailyCost;
+
+    static final String STATE_BUGET = "budget";
+    private SharedPreferences sp_budget;
+    private String sharedPrefFile =
+            "com.example.android.bd_system";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_budget);
+
+        sp_budget = getSharedPreferences(
+                sharedPrefFile, MODE_PRIVATE);
+
+        dailyCost = sp_budget.getInt(STATE_BUGET, 0);
+
+        if(dailyCost!=0){
+            Toast.makeText(Budget.this, "Your daily quota is " + String.valueOf(dailyCost),Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putInt(STATE_BUGET, dailyCost);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+
+        SharedPreferences.Editor preferencesEditor = sp_budget.edit();
+        preferencesEditor.putInt(STATE_BUGET, dailyCost);
+        preferencesEditor.apply();
     }
 
     public void showDatePicker(View view) {
@@ -49,8 +80,8 @@ public class Budget extends AppCompatActivity {
         EditText edittext_budget = findViewById(R.id.editText_budget);
         budget = Integer.valueOf(edittext_budget.getText().toString());
 
-        int dailycost = budget/remain_days;
+        dailyCost = budget/remain_days;
 
-        Toast.makeText(Budget.this, "Your daily quota is " + String.valueOf(dailycost),Toast.LENGTH_LONG).show();
+        Toast.makeText(Budget.this, "Your daily quota is " + String.valueOf(dailyCost),Toast.LENGTH_LONG).show();
     }
 }
