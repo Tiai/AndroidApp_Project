@@ -1,5 +1,6 @@
 package com.example.bd_system;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
@@ -17,10 +18,8 @@ public class Budget extends AppCompatActivity {
     private int remain_days;
     private int dailyCost;
 
-    static final String STATE_BUGET = "budget";
+    static final String STATE_BUDGET = "budget";
     private SharedPreferences sp_budget;
-    private String sharedPrefFile =
-            "com.example.android.bd_system";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +27,9 @@ public class Budget extends AppCompatActivity {
         setContentView(R.layout.activity_budget);
 
         sp_budget = getSharedPreferences(
-                sharedPrefFile, MODE_PRIVATE);
+                "shared_budget", MODE_PRIVATE);
 
-        dailyCost = sp_budget.getInt(STATE_BUGET, 0);
+        dailyCost = sp_budget.getInt(STATE_BUDGET, 0);
 
         if(dailyCost!=0){
             Toast.makeText(Budget.this, "Your daily quota is " + String.valueOf(dailyCost),Toast.LENGTH_LONG).show();
@@ -39,7 +38,7 @@ public class Budget extends AppCompatActivity {
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        outState.putInt(STATE_BUGET, dailyCost);
+        outState.putInt(STATE_BUDGET, dailyCost);
         super.onSaveInstanceState(outState);
     }
 
@@ -48,7 +47,7 @@ public class Budget extends AppCompatActivity {
         super.onPause();
 
         SharedPreferences.Editor preferencesEditor = sp_budget.edit();
-        preferencesEditor.putInt(STATE_BUGET, dailyCost);
+        preferencesEditor.putInt(STATE_BUDGET, dailyCost);
         preferencesEditor.apply();
     }
 
@@ -77,11 +76,11 @@ public class Budget extends AppCompatActivity {
     }
 
     public void setNotify(View view) {
-        EditText edittext_budget = findViewById(R.id.editText_budget);
-        budget = Integer.valueOf(edittext_budget.getText().toString());
+        EditText editText_budget = findViewById(R.id.editText_budget);
+        budget = Integer.valueOf(editText_budget.getText().toString());
 
         dailyCost = budget/remain_days;
 
-        Toast.makeText(Budget.this, "Your daily quota is " + String.valueOf(dailyCost),Toast.LENGTH_LONG).show();
+        Toast.makeText(Budget.this, "Your daily quota is " + Integer.toString(dailyCost),Toast.LENGTH_LONG).show();
     }
 }

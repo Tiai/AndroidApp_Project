@@ -5,13 +5,36 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
+
+import static java.sql.Types.NULL;
 
 public class MainActivity extends AppCompatActivity {
+
+    static final String STATE_BUDGET = "budget";
+    private SharedPreferences sp_budget;
+    private int dailyCost;
+
+    static final String STATE_DEPOSIT = "deposit";
+    private SharedPreferences sp_deposit;
+    private int dailySave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        sp_budget = getSharedPreferences(
+                "shared_budget", MODE_PRIVATE);
+        dailyCost = sp_budget.getInt(STATE_BUDGET, 0);
+
+        sp_deposit = getSharedPreferences(
+                "shared_deposit", MODE_PRIVATE);
+        dailySave = sp_deposit.getInt(STATE_DEPOSIT, 0);
+
+        if(dailyCost!=0 || dailySave != 0){
+           Toast.makeText(MainActivity.this, "Your daily quota is " + Integer.toString(dailyCost) + "&\n" + "Your must save " + String.valueOf(dailySave) + " per day" ,Toast.LENGTH_LONG).show();
+        }
     }
 
     public void addBudget(View view) {

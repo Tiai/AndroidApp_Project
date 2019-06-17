@@ -1,14 +1,19 @@
 package com.example.bd_system;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.widget.DatePicker;
 
 import java.util.Calendar;
+
+import static android.support.v4.content.ContextCompat.getSystemService;
 
 public class DateSelect extends DialogFragment
         implements DatePickerDialog.OnDateSetListener {
@@ -28,8 +33,15 @@ public class DateSelect extends DialogFragment
     @Override
     public void onDateSet(DatePicker datePicker,
                           int year, int month, int day) {
-        Budget activity = (Budget) getActivity();
-        activity.processDatePickerResult(year, month, day);
+
+        try {
+            Budget b_activity = (Budget) getActivity();
+            b_activity.processDatePickerResult(year, month, day);
+        }
+        catch (Exception e){
+            Deposit d_activity = (Deposit) getActivity();
+            d_activity.processDatePickerResult(year, month, day);
+        }
     }
 
 }
