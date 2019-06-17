@@ -11,6 +11,8 @@ import static java.sql.Types.NULL;
 
 public class MainActivity extends AppCompatActivity {
 
+    private int totalcount;
+
     static final String STATE_BUDGET = "budget";
     private SharedPreferences sp_budget;
     private int dailyCost;
@@ -32,8 +34,10 @@ public class MainActivity extends AppCompatActivity {
                 "shared_deposit", MODE_PRIVATE);
         dailySave = sp_deposit.getInt(STATE_DEPOSIT, 0);
 
-        if(dailyCost!=0 || dailySave != 0){
-           Toast.makeText(MainActivity.this, "Your daily quota is " + Integer.toString(dailyCost) + "&\n" + "Your must save " + String.valueOf(dailySave) + " per day" ,Toast.LENGTH_LONG).show();
+        totalcount = dailyCost + dailySave;
+
+        if(totalcount != 0){
+           Toast.makeText(MainActivity.this, "You must have " + String.valueOf(totalcount) + " at the end of the day" ,Toast.LENGTH_LONG).show();
         }
     }
 
