@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 "shared_deposit", MODE_PRIVATE);
         dailySave = sp_deposit.getInt(STATE_DEPOSIT, 0);
 
-        totalcount = dailyCost + dailySave;
+        totalcount = dailyCost - dailySave;
 
         if(totalcount != 0){
             String text = "Your daily quota is " + String.valueOf(dailyCost) + "\n"
