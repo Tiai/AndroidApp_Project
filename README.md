@@ -18,16 +18,16 @@ DatePicker
 Nexus 5X API26下測試
 
 ## 程式使用方式
-(screenshots/Start.gif)
+![screenshots/Start.gif](screenshots/Start.gif)
 
 ## 預算方面
-(screenshots/Budget.gif)
+![screenshots/Budget.gif](screenshots/Budget.gif)
 
 ## 存款方面
-(screenshots/Deposit.gif)
+![screenshots/Deposit.gif](screenshots/Deposit.gif)
 
 ## 整體方面
-(screenshots/Whole.gif)
+![screenshots/Whole.gif](screenshots/Whole.gif)
 
 ## 圖片參照
 富樂72財商學院-10/4(二)銀行家 vs.投資客－銀行貸款不傳祕技!
