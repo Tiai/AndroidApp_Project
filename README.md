@@ -6,16 +6,16 @@
 P76051195 林德培
 
 ## 程式使用相關技巧
-SharedPreferences
-onclick
-textview
-button
-imageview
-intent switch
-DatePicker
+- SharedPreferences
+- onclick
+- textview
+- button
+- imageview
+- intent switch
+- DatePicker
 
 ## 程式使用環境
-Nexus 5X API26下測試
+- Nexus 5X API26下測試
 
 ## 程式使用方式
 ![screenshots/Start.gif](screenshots/Start.gif)
@@ -30,4 +30,4 @@ Nexus 5X API26下測試
 ![screenshots/Whole.gif](screenshots/Whole.gif)
 
 ## 圖片參照
-[富樂72財商學院-10/4(二)銀行家 vs.投資客－銀行貸款不傳祕技!]https://www.beclass.com/rid=193a1e957ef64ed63a45
+[富樂72財商學院-10/4(二)銀行家 vs.投資客－銀行貸款不傳祕技!](https://www.beclass.com/rid=193a1e957ef64ed63a45)
