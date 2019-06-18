@@ -1,1 +1,34 @@
-# AndroidApp_Project
+# BDManagement
+
+在日常生活中，因為"開源"有限且困難，所以需要"節流"，所以我開發了這個app用來減少支出繁瑣的計算，畫面簡單易懂好操作。
+
+## 組員成員
+P76051195 林德培
+
+## 程式使用相關技巧
+SharedPreferences
+onclick
+textview
+button
+imageview
+intent switch
+DatePicker
+
+## 程式使用環境
+Nexus 5X API26下測試
+
+## 程式使用方式
+(screenshots/Start.gif)
+
+## 預算方面
+(screenshots/Budget.gif)
+
+## 存款方面
+(screenshots/Deposit.gif)
+
+## 整體方面
+(screenshots/Whole.gif)
+
+## 圖片參照
+富樂72財商學院-10/4(二)銀行家 vs.投資客－銀行貸款不傳祕技!
+https://www.beclass.com/rid=193a1e957ef64ed63a45
