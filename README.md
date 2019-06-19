@@ -9,7 +9,7 @@
 - P76051195 林德培
 
 ## APK
-[APK](https://github.com/Tiai/AndroidApp_Project/tree/master/apk)
+[APK](https://github.com/Tiai/AndroidApp_Project/blob/master/apk/app-release.apk)
 
 ## 程式使用相關技巧
 - SharedPreferences
