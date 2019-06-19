@@ -1,12 +1,15 @@
 # BDManagement
 
 - 在日常生活中，因為"開源"有限且困難，所以需要"節流"。
-- 所以我開發了這個app，用來減少支出繁瑣的計算，畫面簡單易懂好操作。
+- 所以我開發了這個app，用來減少收支繁瑣的計算與登入提醒，畫面簡單易懂好操作。
 - Budget: 負責計算出每日可用資金。
 - Deposit: 負責計算如果有想購買的物品，每日所需存的金額。
 
 ## 組員成員
 - P76051195 林德培
+
+## APK
+[APK](https://github.com/Tiai/AndroidApp_Project/blob/master/apk/app-release.apk)
 
 ## 程式使用相關技巧
 - SharedPreferences
