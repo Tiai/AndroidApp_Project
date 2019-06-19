@@ -33,7 +33,7 @@
 ![screenshots/Deposit.gif](screenshots/Deposit.gif)
 
 ## 重開方面
-![screenshots/Whole.gif](screenshots/Temp.gif)
+![screenshots/Temp.gif](screenshots/Temp.gif)
 
 ## 圖片參照
 [富樂72財商學院-10/4(二)銀行家 vs.投資客－銀行貸款不傳祕技!](https://www.beclass.com/rid=193a1e957ef64ed63a45)
