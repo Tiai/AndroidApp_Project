@@ -24,19 +24,19 @@
 - Nexus 5X API26下測試
 
 ## 程式整體使用
-![screenshots/Start.gif](screenshots/Demo.gif)
+![screenshots/Start.gif](AndroidApp_Project/screenshots/Demo.gif)
 
 ## 程式進入畫面
-![screenshots/Start.gif](screenshots/Start.gif)
+![screenshots/Start.gif](AndroidApp_Project/screenshots/Start.gif)
 
 ## 預算方面
-![screenshots/Budget.gif](screenshots/Budget.gif)
+![screenshots/Budget.gif](AndroidApp_Project/screenshots/Budget.gif)
 
 ## 存款方面
-![screenshots/Deposit.gif](screenshots/Deposit.gif)
+![screenshots/Deposit.gif](AndroidApp_Project/screenshots/Deposit.gif)
 
 ## 重開方面
-![screenshots/Temp.gif](screenshots/Temp.gif)
+![screenshots/Temp.gif](AndroidApp_Project/screenshots/Temp.gif)
 
 ## 圖片參照
 [富樂72財商學院-10/4(二)銀行家 vs.投資客－銀行貸款不傳祕技!](https://www.beclass.com/rid=193a1e957ef64ed63a45)
