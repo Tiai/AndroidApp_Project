@@ -24,7 +24,7 @@
 - Nexus 5X API26下測試
 
 ## 程式整體使用
-![screenshots/Start.gif](AndroidApp_Project/screenshots/Demo.gif)
+![screenshots/Demo.gif]([AndroidApp_Project/screenshots/Demo.gif](https://github.com/Tiai/AndroidApp_Project/blob/master/screenshots/Budget.gif))
 
 ## 程式進入畫面
 ![screenshots/Start.gif](AndroidApp_Project/screenshots/Start.gif)
